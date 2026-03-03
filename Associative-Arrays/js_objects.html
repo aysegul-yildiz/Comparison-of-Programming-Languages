@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+//Javascript code to show associative array usage
+// 1.Initialize 
+console.log("1.Javascipt associative array initialization: ")
+console.log("*********************************************")
+js_dict = {
+    1 : "first_val",
+    "second_key" : 2,
+    "third_key" : "third_val",
+    4 : 4
+}
+for (key in js_dict){
+   console.log(key + " : "+js_dict[key])
+}
+console.log()
+
+// 2. Get the value for a given key
+console.log("2.Get the value for a given key: ")
+console.log("*********************************************")
+console.log("The first value obtained according to its key with bracket notation:")
+console.log(js_dict[1])
+console.log("The third value obtained according to its key with bracket notation:")
+console.log(js_dict["third_key"]+"\n")
+
+//3.Add a new element
+console.log("3.Add a new element: ")
+console.log("*********************************************")
+js_dict["fifth_key"] = "fifth_val"
+console.log("Array after adding an element:")
+for (key in js_dict){
+   console.log(key + " : "+js_dict[key])
+}
+console.log()
+
+// 4.Remove an element
+console.log("4.Remove en element:")
+console.log("*********************************************")
+delete js_dict[4]
+console.log("Array after removing the element with key 4:")
+for (key in js_dict){
+   console.log(key + " : "+js_dict[key])
+}
+console.log()
+
+//5. Modify the value of an existing element
+console.log("5.Modify the value of an existing element:")
+console.log("*********************************************")
+js_dict[1] = "changed"
+console.log("First value after modifying it using bracket notation:")
+console.log(js_dict[1])
+console.log()
+
+//6.Search for the existence of a key
+console.log("6.Search for the existence of a key:")
+console.log("*********************************************")
+searched_key1 = "fifth_key"
+if (searched_key1 in js_dict){
+    console.log(searched_key1+" is in the keys of js_dict.")
+}
+else{
+   console.log(searched_key1+" is not in the keys of js_dict.")
+}
+searched_key2 = 66
+if (searched_key2 in js_dict){
+    console.log(searched_key2+" is in the keys of js_dict.")
+}
+else{
+   console.log(searched_key2+" is not in the keys of js_dict.")
+}
+console.log()
+
+// 7. Search for the existence of a value
+console.log("7.Search for the existence of a value:")
+//search value existence using values()
+console.log("Search for existence of value in js_dict with values():")
+searched_val1 = "third_val"
+if (Object.values(js_dict).includes(searched_val1)) {
+  console.log(searched_val1 + "is in values of js_dict.");
+} else {
+  console.log(searched_val1 + "is not in values of js_dict.");
+}
+// search value existence by looping through
+console.log("Search for existence of value in js_dict by looping through dictionary:")
+searched_val2 = "a"
+is_in = false
+for (key in js_dict){
+    if(js_dict[key] == searched_val2){
+        is_in = true
+    }
+}
+if(is_in){
+    console.log(searched_val2+" is in values of js_dict.")
+}
+else{
+    console.log(searched_val2+" is not in values of js_dict.")
+}
+console.log()
+
+// 8.Loop through an associative array, apply a function, called foo, which simply prints the key-value pair
+console.log("8.Loop through an associative array, apply a function, called foo, which simply prints the key-value pair:")
+console.log("*********************************************")
+function foo(key, value){
+    console.log(key +" : " + value)
+}
+for ( key in js_dict) {
+        foo(key, js_dict[key]);
+}
+
+    </script>
+</body>
+</html>
