@@ -1,0 +1,71 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        console.log("1. What is the form and type of the expression that controls the selection?");
+console.log("*".repeat(50));
+let firstNum = 54;
+
+if (firstNum % 23 === 0) {
+    console.log(`${firstNum} is divisible by 23.`);
+} else {
+    console.log(`${firstNum} is not divisible by 23.`);
+}
+
+let secondNum = 69;
+
+if (secondNum % 23 === 0) {
+    console.log(`${secondNum} is divisible by 23.`);
+} else {
+    console.log(`${secondNum} is not divisible by 23.`);
+}
+
+console.log("");
+
+console.log("2. How are the then and else clauses specified?");
+console.log("*".repeat(50));
+
+console.log("If the grade is greater then 50 then the student passes.");
+let gradeA = 50;
+let gradeB = 43;
+if (gradeA >= 50) {
+    console.log("Student A passed.");
+} else {
+    console.log("Student A failed.");
+}
+if (gradeB >= 50) {
+    console.log("Student B passed.");
+} else {
+    console.log("Student B failed.");
+}
+
+console.log("");
+
+console.log("3. How should the meaning of nested selectors be specified?");
+console.log("*".repeat(50));
+
+console.log("In order to ride the rollercoaster the person should be older than 15 years old and taller than 150 cm.");
+
+let ages = [12, 20, 18];
+let heights = [142, 150, 165];
+for (let i = 0; i < 3; i++) {
+    if (ages[i] >= 15) {
+        if (heights[i] > 150) {
+            console.log(`Person ${i + 1} can ride the rollercoaster.`);
+        } else {
+            console.log(`Person ${i + 1} cannot ride the rollercoaster.`);
+        }
+    } else {
+        console.log(`Person ${i + 1} cannot ride the rollercoaster.`);
+    }
+}
+
+console.log("");
+
+    </script>
+</body>
+</html>
